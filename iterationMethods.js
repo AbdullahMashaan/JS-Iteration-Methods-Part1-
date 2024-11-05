@@ -19,9 +19,23 @@ numbersGreaterOrEqualthan25 = numbers.filter (function (num1){
 
 
 
+const numbersGreaterOrEqualThan25 = numbers.filter (num1) => {
+  if (num1 >= 25) return true;
+  else return false;
+}
+
+
+const numbersGreaterOrEqualThan25 = numbers.filter(num1 => num1 >= 25);
+
+
+
+
 numbersDivisibleByFive = numbers.filter (function (num2){
     return num2 % 5 === 0;
 });
+
+const numbersDivisibleByFive = numbers.filter( num2 => num2 % 5 === 0);
+
 
 
 
@@ -41,6 +55,7 @@ squares = numbers.map (function (num3) {
     return num3**2;
 
 });
+const squared = numbers.map ((num) => num **2);
 
 
 
@@ -49,6 +64,9 @@ numberByTwo = numbers.map (function (num4) {
     return num4*2;
 
 });
+
+const numberByTwo = numbers.map ((num) => num*2);
+
 
 /*****************************************************************
 Part 3: Combining Filtering and Mapping
@@ -64,13 +82,25 @@ Combine the filter and map methods to perform the following tasks:
 
 const numbers = [10, 13, 20, 25, 38, 35, 40];
 
+const largerThanTwenty = numbers.filter ( (num) => num > 20);
+const largerThanTwentySquared = largerThanTwenty.map( (num) => num**2);
+
+
+
+
+
+
+
+
 const numbersGreaterOrEqThan20Squared = numbers
 .filter(function(num5) {
     return num5 >= 20;
   })
-  .map(function(num) {
+  .map(function(num5) {
     return num5 ** 2;
   });
+
+
 
 
   const numbersDivisibleByFiveMultipliedBy3 = numbers
@@ -80,6 +110,11 @@ const numbersGreaterOrEqThan20Squared = numbers
   .map(function(num6) {
     return num6 * 3;
   });
+
+
+const divBy5MultBy3 = numbers.filter ((num) => num % === 0).map ((num) => num * 3);
+
+console.log(divBy5MultBy3);
 
 
 
